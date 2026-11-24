@@ -1,0 +1,17 @@
+
+State Machine - |modulo_integrador|renderizador_grafico:u_render|estado
+Name estado.ST_FUNDO estado.ST_EIXO estado.ST_D2 estado.ST_P2 estado.ST_D1 estado.ST_P1 estado.ST_BLANK 
+estado.ST_BLANK 0 0 0 0 0 0 0 
+estado.ST_P1 0 0 0 0 0 1 1 
+estado.ST_D1 0 0 0 0 1 0 1 
+estado.ST_P2 0 0 0 1 0 0 1 
+estado.ST_D2 0 0 1 0 0 0 1 
+estado.ST_EIXO 0 1 0 0 0 0 1 
+estado.ST_FUNDO 1 0 0 0 0 0 1 
+
+State Machine - |modulo_integrador|maquina_central:u_fsm_central|estado_atual
+Name estado_atual.CONCLUIDO estado_atual.BUSY estado_atual.CALCULA_VERTICE estado_atual.INICIO 
+estado_atual.INICIO 0 0 0 0 
+estado_atual.CALCULA_VERTICE 0 0 1 1 
+estado_atual.BUSY 0 1 0 1 
+estado_atual.CONCLUIDO 1 0 0 1 
