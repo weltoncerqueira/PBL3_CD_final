@@ -7,6 +7,7 @@ module modulo_integrador (
     output [6:0] sel_abc,
     output led_busy,
     output led_done,
+    input sel_func,      
     // Saídas de vídeo físicas da placa
     output [3:0] VGA_R,
     output [3:0] VGA_G,
@@ -24,6 +25,11 @@ module modulo_integrador (
 	 // Fios de controle da FSM
 	 wire err_v1_w, err_v2_w, err_f1_w, err_f2_w;
 	 wire ovf_v1, ovf_v2, ovf_f1, ovf_f2;
+	 
+	 // Máscara dos erros da função 2
+	 wire ovf_f2_m, ovf_v2_m;
+    and g_mask_f2 (ovf_f2_m, ovf_f2, sel_func);
+    and g_mask_v2 (ovf_v2_m, ovf_v2, sel_func);
     
     wire botao_pulse; 
     wire rst_interno;
@@ -103,8 +109,8 @@ module modulo_integrador (
 		 .clk(clk),
 		 .reset(rst_interno),
 		 .sel_d(sel_abc[6]),
-		 .ovf_v1_in(ovf_v1), .ovf_v2_in(ovf_v2),
-		 .ovf_f1_in(ovf_f1), .ovf_f2_in(ovf_f2),
+		 .ovf_v1_in(ovf_v1), .ovf_v2_in(ovf_v2_m),
+		 .ovf_f1_in(ovf_f1), .ovf_f2_in(ovf_f2_m),
 		 .fim_x(fim_x_w),
 		 .err_v1(err_v1_w), .err_v2(err_v2_w),
 		 .err_f1(err_f1_w), .err_f2(err_f2_w),
@@ -226,12 +232,11 @@ module modulo_integrador (
 		 .video_on(video_on),
 		 .vga_x(vga_x),
 		 .vga_y(vga_y),
-		 .y_func1(y_func1),  
-		 .y_deriv1(y_deriv1),
-		 .y_func2(y_func2),   
-		 .y_deriv2(y_deriv2),
-		 .err_f1(inval_f1),
-		 .err_f2(inval_f2),
+		 .y_func1(y_func1),   .y_deriv1(y_deriv1),
+		 .y_func2(y_func2),   .y_deriv2(y_deriv2),
+		 .err_f1(err_f1_w),
+		 .err_f2(err_f2_w),
+		 .habilita_f2(sel_func),
 		 .sistema_pronto(led_done),
 		 .vga_r(r_out), .vga_g(g_out), .vga_b(b_out)
 	 );
