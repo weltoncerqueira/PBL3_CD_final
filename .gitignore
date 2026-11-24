@@ -1,0 +1,14 @@
+# Arquivos temporários do Quartus
+db/
+incremental_db/
+output_files/
+
+# Arquivos temporários de simulação
+*.wlf
+transcript
+
+# Arquivos de backup
+*.bak
+
+# Arquivos temporários do Linux
+*~
