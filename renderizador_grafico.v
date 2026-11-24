@@ -80,10 +80,10 @@ module renderizador_grafico (
     always @(*) begin
         case (estado)
             ST_BLANK: begin vga_r = 4'h0; vga_g = 4'h0; vga_b = 4'h0; end // preto
-            ST_P1:    begin vga_r = 4'hF; vga_g = 4'h0; vga_b = 4'h0; end // vermelho (parábola 1)
-            ST_D1:    begin vga_r = 4'hF; vga_g = 4'hF; vga_b = 4'h0; end // amarelo (derivada 1)
-            ST_P2:    begin vga_r = 4'h0; vga_g = 4'hF; vga_b = 4'h0; end // verde (parábola 2)
-            ST_D2:    begin vga_r = 4'h0; vga_g = 4'hF; vga_b = 4'hF; end // ciano (derivada 2)
+            ST_P1:    begin vga_r = 4'hC; vga_g = 4'h0; vga_b = 4'h0; end // vermelho escuro (parábola 1)
+            ST_D1:    begin vga_r = 4'hB; vga_g = 4'h9; vga_b = 4'h0; end // amarelo escuro/mostarda (derivada 1)
+            ST_P2:    begin vga_r = 4'h0; vga_g = 4'h8; vga_b = 4'h0; end // verde escuro (parábola 2)
+            ST_D2:    begin vga_r = 4'h0; vga_g = 4'h8; vga_b = 4'h8; end // ciano escuro/azul-petróleo (derivada 2)
             ST_EIXO:  begin vga_r = 4'h0; vga_g = 4'h0; vga_b = 4'h0; end // eixos em preto
             ST_FUNDO: begin vga_r = 4'hF; vga_g = 4'hF; vga_b = 4'hF; end // fundo branco
             default:  begin vga_r = 4'h0; vga_g = 4'h0; vga_b = 4'h0; end
