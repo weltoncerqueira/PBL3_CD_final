@@ -21,13 +21,17 @@ module renderizador_grafico (
     // ------------------------------------------------------------------
     // Datapath: eixos, conversão y -> linha da tela (240 - y) e acertos
     // ------------------------------------------------------------------
+	 
+	 // Formação dos eixos cartesianos
     wire hit_eixos = (vga_x == 10'd320) || (vga_y == 10'd240);
 
+	 // Extensão para 32 bits
     wire signed [31:0] y_f1_ext = {{2{y_func1[29]}},   y_func1};
     wire signed [31:0] y_d1_ext = {{12{y_deriv1[19]}}, y_deriv1};
     wire signed [31:0] y_f2_ext = {{2{y_func2[29]}},   y_func2};
     wire signed [31:0] y_d2_ext = {{12{y_deriv2[19]}}, y_deriv2};
 
+	 // Conversão para linha da tela
     wire signed [31:0] ys_f1 = 32'sd240 - y_f1_ext;
     wire signed [31:0] ys_d1 = 32'sd240 - y_d1_ext;
     wire signed [31:0] ys_f2 = 32'sd240 - y_f2_ext;

@@ -3,8 +3,8 @@
 // CAPTURA : ciclo em que p_tick = 1 (vga_x avança; os registradores carregam)
 module captura_y_fsm (
     input  wire        clk,
-    input  wire        rst,        // ativo em alto
-    input  wire        p_tick,     // tick de pixel do vga_sync
+    input  wire        rst,        
+    input  wire        p_tick,     
     input  wire [29:0] y_func1_c,
     input  wire [19:0] y_deriv1_c,
     input  wire [29:0] y_func2_c,
@@ -35,8 +35,8 @@ module captura_y_fsm (
             default: proximo = ESPERA;
         endcase
     end
-
-    // Saída de Moore
+	 
+	 // Quando: Proximo estado = captura; carrega = 1
     assign carrega = (estado == CAPTURA);
 
     // Registradores de dados, carregados apenas em CAPTURA

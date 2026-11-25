@@ -25,13 +25,13 @@ module maquina_central (
 
     reg [1:0] estado_atual, proximo_estado;
 
-    // 1. Registrador de estado
+    // Registrador de estado
     always @(posedge clk or posedge reset) begin
         if (reset) estado_atual <= INICIO;
         else       estado_atual <= proximo_estado;
     end
 
-    // 2. Próximo estado
+    // Próximo estado
     always @(*) begin
         proximo_estado = estado_atual;
         case (estado_atual)
@@ -43,7 +43,7 @@ module maquina_central (
         endcase
     end
 
-    // 3. Saídas
+    // Saídas
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             err_v1 <= 1'b0; err_v2 <= 1'b0;

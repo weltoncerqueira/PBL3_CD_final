@@ -4,11 +4,13 @@ module modulo_integrador (
     input botao,
     input clk,
     input reset,
+	 
     output [6:0] sel_abc,
+	 
     output led_busy,
     output led_done,
     input sel_func,      
-    // Saídas de vídeo físicas da placa
+
     output [3:0] VGA_R,
     output [3:0] VGA_G,
     output [3:0] VGA_B,
@@ -16,6 +18,7 @@ module modulo_integrador (
     output VGA_VS,
 	 output [6:0] HEX0, HEX1, HEX2, 
 	 output [6:0] HEX3, HEX4, HEX5
+	 
 	);
 
     wire [7:0] reg_a1, reg_b1, reg_c1;
@@ -76,15 +79,16 @@ module modulo_integrador (
     wire video_on, p_tick;
     wire [9:0] x_cart;
 
-	 //Detecta fim de contagem
+	 // Detecta fim de contagem
 	 detecta_fim_x u_fim_x (
 		 .x(vga_x),
 		 .fim_x(fim_x_w)
 	 );
 
-	// Varreduraa - Contagem ate 639
+	// Espelha o contador do VGA (0 a 799)
 	wire [9:0] x_prox = (vga_x == 10'd799) ? 10'd0 : (vga_x + 10'd1);
 
+	// Transforma as cordenadas do VGA para cordenadas cartezianas
 	transformador_coordenadas trans_coord_vga (
 		 .x(x_prox),
 		 .x_cart(x_cart)       // x_prox - 320
@@ -92,7 +96,7 @@ module modulo_integrador (
 
 	wire [10:0] x_cart_ext = {x_cart[9], x_cart};
 
-    //  Instancia o controlador VGA (periférico de exibição)[cite: 3]
+    // Controlador VGA (periférico de exibição)
     vga_sync u_vga (
         .clk(clk),
         .reset(~reset),
@@ -104,16 +108,20 @@ module modulo_integrador (
         .y(vga_y)
     );
 
-    // Instancia a Máquina de Estados Central (Apenas uma vez)
+    // Máquina de Estados principal do código 
 	 maquina_central u_fsm_central (
 		 .clk(clk),
 		 .reset(rst_interno),
 		 .sel_d(sel_abc[6]),
-		 .ovf_v1_in(ovf_v1), .ovf_v2_in(ovf_v2_m),
-		 .ovf_f1_in(ovf_f1), .ovf_f2_in(ovf_f2_m),
+		 .ovf_v1_in(ovf_v1), 
+		 .ovf_v2_in(ovf_v2_m),
+		 .ovf_f1_in(ovf_f1), 
+		 .ovf_f2_in(ovf_f2_m),
 		 .fim_x(fim_x_w),
-		 .err_v1(err_v1_w), .err_v2(err_v2_w),
-		 .err_f1(err_f1_w), .err_f2(err_f2_w),
+		 .err_v1(err_v1_w), 
+		 .err_v2(err_v2_w),
+		 .err_f1(err_f1_w), 
+		 .err_f2(err_f2_w),
 		 .led_busy(led_busy),
 		 .led_done(led_done)
 	 );
@@ -122,7 +130,7 @@ module modulo_integrador (
     wire [17:0] Vy1, Vy2;
 	 wire [17:0] delta1, delta2;
 	 
-	 // MÓDULO QUE CALCULA  Δ = b² − 4ac
+	 // CALCULA  Δ = b² − 4ac (função 1)
 	 calculo_delta calc_delta_1 (
 		.a(reg_a1),
 		.b(reg_b1),
@@ -131,7 +139,7 @@ module modulo_integrador (
 		.overflow()
 	 );
 	 
-	 // MÓDULO QUE CALCULA  Δ = b² − 4ac
+	 // CALCULA  Δ = b² − 4ac (função 2)
 	 calculo_delta calc_delta_2 (
 		.a(reg_a2),
 		.b(reg_b2),
@@ -165,6 +173,7 @@ module modulo_integrador (
 	wire [29:0] y_func1_c, y_func2_c;
 	wire [19:0] y_deriv1_c, y_deriv2_c;
 
+	// Cálculo da Função 1
 	calcula_y calcula_y1 (
 		.x(x_cart_ext), 
 		.a(reg_a1), 
@@ -175,6 +184,7 @@ module modulo_integrador (
 		.y(y_func1_c)
 	);
 	
+	// Cálculo da Função 2
 	calcula_y calcula_y2 (
 		.x(x_cart_ext), 
 		.a(reg_a2), 
@@ -184,7 +194,8 @@ module modulo_integrador (
 		.cout(), 
 		.y(y_func2_c)
 	);
-
+	
+	// Cálculo da derivada 1
 	calcula_y_linha derivada_1 (
 		.x(x_cart_ext), 
 		.a(reg_a1), 
@@ -192,6 +203,7 @@ module modulo_integrador (
 		.y_linha(y_deriv1_c)
 	);
 	
+	// Cálculo da derivada 2
 	calcula_y_linha derivada_2 (
 		.x(x_cart_ext), 
 		.a(reg_a2), 
@@ -202,16 +214,21 @@ module modulo_integrador (
 	
 	wire [29:0] y_func1, y_func2;
 	wire [19:0] y_deriv1, y_deriv2;
-
+	
+	// FSM que captura os valores de f(x) e armazena temporariamente
 	captura_y_fsm u_captura_y (
-		 .clk(clk),
-		 .rst(rst_interno),
-		 .p_tick(p_tick),
-		 .y_func1_c(y_func1_c),   .y_deriv1_c(y_deriv1_c),
-		 .y_func2_c(y_func2_c),   .y_deriv2_c(y_deriv2_c),
-		 .y_func1(y_func1),       .y_deriv1(y_deriv1),
-		 .y_func2(y_func2),       .y_deriv2(y_deriv2),
-		 .carrega()
+		.clk(clk),
+		.rst(rst_interno),
+		.p_tick(p_tick),
+		.y_func1_c(y_func1_c),   
+		.y_deriv1_c(y_deriv1_c),
+		.y_func2_c(y_func2_c),   
+	   .y_deriv2_c(y_deriv2_c),
+		.y_func1(y_func1),       
+		.y_deriv1(y_deriv1),
+		.y_func2(y_func2),       
+		.y_deriv2(y_deriv2),
+		.carrega()
 	);
 	
     // Fios para as cores do renderizador
@@ -225,20 +242,24 @@ module modulo_integrador (
     assign VGA_G = g_out;
     assign VGA_B = b_out;
 
-    // Instancia o módulo de renderização gráfica (Restaurado)
+    // Instancia do módulo de renderização gráfica (Restaurado)
 	 renderizador_grafico u_render (
 		 .clk(clk),
 		 .rst(rst_interno),
 		 .video_on(video_on),
 		 .vga_x(vga_x),
 		 .vga_y(vga_y),
-		 .y_func1(y_func1),   .y_deriv1(y_deriv1),
-		 .y_func2(y_func2),   .y_deriv2(y_deriv2),
+		 .y_func1(y_func1),   
+		 .y_deriv1(y_deriv1),
+		 .y_func2(y_func2),   
+		 .y_deriv2(y_deriv2),
 		 .err_f1(err_f1_w),
 		 .err_f2(err_f2_w),
 		 .habilita_f2(sel_func),
 		 .sistema_pronto(led_done),
-		 .vga_r(r_out), .vga_g(g_out), .vga_b(b_out)
+		 .vga_r(r_out), 
+		 .vga_g(g_out),
+		 .vga_b(b_out)
 	 );
 	 
 	 // Mostra erro nos displays de 7 segmentos
