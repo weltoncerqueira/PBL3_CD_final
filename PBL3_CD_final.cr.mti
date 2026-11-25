@@ -1,0 +1,319 @@
+B:/altera/PBL3_CD_final-main/calcula_y_linha.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/calcula_y_linha.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module calcula_y_linha
+-- Compiling module somador_20b
+
+Top level modules:
+	calcula_y_linha
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_9x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/multiplicador_9x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiplicador_9x11_sinalizado
+
+Top level modules:
+	multiplicador_9x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/tb_multiplicador_8x22_sinalizado.sv {1 {vlog -work work -sv -stats=none B:/altera/PBL3_CD_final-main/tb_multiplicador_8x22_sinalizado.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_multiplicador_8x22_sinalizado
+
+Top level modules:
+	tb_multiplicador_8x22_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/calcula_vertices.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/calcula_vertices.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module calcula_vertices
+-- Compiling module vertice_x
+-- Compiling module vertice_y
+
+Top level modules:
+	calcula_vertices
+
+} {} {}} B:/altera/PBL3_CD_final-main/desenha_plano_cartesiano.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/desenha_plano_cartesiano.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module desenha_plano_cartesiano
+
+Top level modules:
+	desenha_plano_cartesiano
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_11x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/multiplicador_11x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiplicador_11x11_sinalizado
+
+Top level modules:
+	multiplicador_11x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/renderizador_grafico.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/renderizador_grafico.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module renderizador_grafico
+
+Top level modules:
+	renderizador_grafico
+
+} {} {}} B:/altera/PBL3_CD_final-main/desenha_eixo_cartesiano.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/desenha_eixo_cartesiano.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module desenha_eixo_cartesiano
+
+Top level modules:
+	desenha_eixo_cartesiano
+
+} {} {}} B:/altera/PBL3_CD_final-main/detecta_fim_x.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/detecta_fim_x.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module detecta_fim_x
+
+Top level modules:
+	detecta_fim_x
+
+} {} {}} B:/altera/PBL3_CD_final-main/mux_2x1.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/mux_2x1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_2x1
+
+Top level modules:
+	mux_2x1
+
+} {} {}} B:/altera/PBL3_CD_final-main/calcula_y.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/calcula_y.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module calcula_y
+-- Compiling module somador_30b
+
+Top level modules:
+	calcula_y
+
+} {} {}} B:/altera/PBL3_CD_final-main/main.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/main.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module main
+
+Top level modules:
+	main
+
+} {} {}} B:/altera/PBL3_CD_final-main/complementoDe2_16bits.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/complementoDe2_16bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module complementoDe2_16bits
+
+Top level modules:
+	complementoDe2_16bits
+
+} {} {}} B:/altera/PBL3_CD_final-main/divisor_9x9_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/divisor_9x9_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module divisor_9x9_sinalizado
+-- Compiling module subtrator
+-- Compiling module divisor
+-- Compiling module divisor_9bits
+-- Compiling module numero_Final_9b
+
+Top level modules:
+	divisor_9x9_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/modulo_integrador.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/modulo_integrador.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module modulo_integrador
+
+Top level modules:
+	modulo_integrador
+
+} {} {}} B:/altera/PBL3_CD_final-main/tb_multiplicador_11x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/tb_multiplicador_11x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_multiplicador_11x11_sinalizado
+
+Top level modules:
+	tb_multiplicador_11x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_16x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/multiplicador_16x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiplicador_16x11_sinalizado
+
+Top level modules:
+	multiplicador_16x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_16x8_sinalizado.sv {1 {vlog -work work -sv -stats=none B:/altera/PBL3_CD_final-main/multiplicador_16x8_sinalizado.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module produtos_parciais_16x8
+-- Compiling module somador_16bits
+-- Compiling module multiplicador_16x8
+-- Compiling module numero_Final_16b
+-- Compiling module multiplicador_16x8_sinalizado
+
+Top level modules:
+	multiplicador_16x8_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/complementoDe2_8bits.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/complementoDe2_8bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module complementoDe2_8bits
+
+Top level modules:
+	complementoDe2_8bits
+
+} {} {}} B:/altera/PBL3_CD_final-main/ff_D.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/ff_D.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ff_D
+
+Top level modules:
+	ff_D
+
+} {} {}} B:/altera/PBL3_CD_final-main/ff_T.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/ff_T.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ff_T
+
+Top level modules:
+	ff_T
+
+} {} {}} B:/altera/PBL3_CD_final-main/somador_completo.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/somador_completo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module somador_completo
+-- Compiling module meio_somador
+
+Top level modules:
+	somador_completo
+	meio_somador
+
+} {} {}} B:/altera/PBL3_CD_final-main/calcula_y.sv {1 {vlog -work work -sv -stats=none B:/altera/PBL3_CD_final-main/calcula_y.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module calcula_y
+-- Compiling module somador_33b
+
+Top level modules:
+	calcula_y
+
+} {} {}} B:/altera/PBL3_CD_final-main/complementoDe2_9bits.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/complementoDe2_9bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module complementoDe2_9bits
+
+Top level modules:
+	complementoDe2_9bits
+
+} {} {}} B:/altera/PBL3_CD_final-main/complementoDe2_18bits.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/complementoDe2_18bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module complementoDe2_18bits
+
+Top level modules:
+	complementoDe2_18bits
+
+} {} {}} B:/altera/PBL3_CD_final-main/detector_de_borda.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/detector_de_borda.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module detector_de_borda
+
+Top level modules:
+	detector_de_borda
+
+} {} {}} B:/altera/PBL3_CD_final-main/maquina_VGA.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/maquina_VGA.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module maquina_VGA
+
+Top level modules:
+	maquina_VGA
+
+} {} {}} B:/altera/PBL3_CD_final-main/vga_sync.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/vga_sync.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module vga_sync
+
+Top level modules:
+	vga_sync
+
+} {} {}} B:/altera/PBL3_CD_final-main/decoder_abc.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/decoder_abc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module decoder_abc
+
+Top level modules:
+	decoder_abc
+
+} {} {}} B:/altera/PBL3_CD_final-main/tb_multiplicador_16x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/tb_multiplicador_16x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_multiplicador_16x11_sinalizado
+
+Top level modules:
+	tb_multiplicador_16x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_8x22_sinalizado.sv {1 {vlog -work work -sv -stats=none B:/altera/PBL3_CD_final-main/multiplicador_8x22_sinalizado.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiplicador_8x22_sinalizado
+
+Top level modules:
+	multiplicador_8x22_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/calculo_delta.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/calculo_delta.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module calculo_delta
+-- Compiling module subtrator_18bits
+
+Top level modules:
+	calculo_delta
+
+} {} {}} B:/altera/PBL3_CD_final-main/maquina_central.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/maquina_central.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module maquina_central
+
+Top level modules:
+	maquina_central
+
+} {} {}} B:/altera/PBL3_CD_final-main/transformador_coordenadas.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/transformador_coordenadas.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module transformador_coordenadas
+
+Top level modules:
+	transformador_coordenadas
+
+} {} {}} B:/altera/PBL3_CD_final-main/captura_y_fsm.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/captura_y_fsm.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module captura_y_fsm
+
+Top level modules:
+	captura_y_fsm
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_8x8_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/multiplicador_8x8_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiplicador_8x8_sinalizado
+-- Compiling module multiplicador_8x8
+-- Compiling module numero_Final_8b
+
+Top level modules:
+	multiplicador_8x8_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/tb_multiplicador_9x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/tb_multiplicador_9x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_multiplicador_9x11_sinalizado
+
+Top level modules:
+	tb_multiplicador_9x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/contador_3b.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/contador_3b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module contador_3b
+
+Top level modules:
+	contador_3b
+
+} {} {}} B:/altera/PBL3_CD_final-main/display_erro_mux.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/display_erro_mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module display_erro_mux
+-- Compiling module mux2_1b
+-- Compiling module mux2_7b
+
+Top level modules:
+	display_erro_mux
+
+} {} {}} B:/altera/PBL3_CD_final-main/divisor_18x18_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/divisor_18x18_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module divisor_18x18_sinalizado
+-- Compiling module subtrator_19b
+-- Compiling module divisor_estagio_18b
+-- Compiling module divisor_18bits
+-- Compiling module numero_Final_18b
+
+Top level modules:
+	divisor_18x18_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/multiplicador_8x11_sinalizado.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/multiplicador_8x11_sinalizado.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiplicador_8x11_sinalizado
+
+Top level modules:
+	multiplicador_8x11_sinalizado
+
+} {} {}} B:/altera/PBL3_CD_final-main/registrador_8b.v {1 {vlog -work work -stats=none B:/altera/PBL3_CD_final-main/registrador_8b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module registrador_8b
+
+Top level modules:
+	registrador_8b
+
+} {} {}}
